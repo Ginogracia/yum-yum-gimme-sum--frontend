@@ -1,0 +1,260 @@
+@mixin absoluteCentering() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+
+.menu-background {
+    width: 390px;
+    height: 844px;
+    overflow: scroll;
+    background-color: rgba(142, 216, 191, 1);
+    @include absoluteCentering();
+    position: relative;
+}
+
+.menu-background-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.logo-small {
+    z-index: 10;
+    height: 70px;
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.cart-button {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 15px;
+    margin-right: 15px;
+    z-index: 10;
+    background-color: rgba(244, 243, 241, 0.94);
+    border: none;
+    border-radius: 4px;
+    @include absoluteCentering();
+    cursor: pointer;
+}
+
+.cart-icon {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: 35px;
+    transition: 0.3s;
+}
+
+.notification-container {
+    background-color: rgba(235, 87, 87, 1);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    @include absoluteCentering();
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.notification-amount {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+}
+
+
+.cart-button:hover {
+
+    .cart-icon {
+        width: 40px;
+        transition: 0.3s;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+.menu-section {
+    z-index: 3;
+    background-color: rgba(96, 88, 88, 1);
+    width: 93%;
+    height: 700px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-header {
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 15px;
+    cursor: default;
+}
+
+.products-container {
+    height: 85%;
+    width: 98%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.menu-item-container {
+    width: 100%;
+    min-height: 90px;
+    border-bottom: 1px dotted rgba(245, 245, 220, 0.445);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 100px;
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.menu-drink-container {
+    width: 100%;
+    min-height: 90px;
+    border-bottom: 1px dotted rgba(245, 245, 220, 0.445);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 50px;
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.menu-dip-container {
+    width: 100%;
+    min-height: 180px;
+    border-bottom: 1px dotted rgba(245, 245, 220, 0.445);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 50px;
+    background-color: transparent;
+    padding-top: 10px;
+    transition: 0.2s;
+}
+
+
+
+.menu-item-container:first-of-type {
+    border-top: 1px dotted rgba(245, 245, 220, 0.445);
+}
+
+.menu-item-container:hover {
+    background-color: rgba(241, 240, 236, 0.12);
+    transition: 0.2s;
+}
+
+.menu-drink-container:hover {
+    background-color: rgba(241, 240, 236, 0.12);
+    transition: 0.2s;
+}
+
+.menu-dip-container:hover {
+    background-color: rgba(241, 240, 236, 0.12);
+    transition: 0.2s;
+}
+
+.item-name {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-left: 15px;
+    cursor: default;
+    font-weight: bold;
+}
+
+.item-price {
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 15px;
+    cursor: default;
+    font-weight: bold;
+}
+
+.item-desc {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 0;
+    cursor: default;
+}
+
+.dip-selector-container {
+    position: absolute;
+    bottom: 0;
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.dip-button {
+    height: 35%;
+    background-color: rgba(241, 240, 236, 0.24);
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.dip-button:hover {
+    background-color: rgba(53, 49, 49, 1);
+    transition: 0.2s;
+}
+
+.dip-name {
+    color: white;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
