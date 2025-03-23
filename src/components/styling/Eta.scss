@@ -1,0 +1,228 @@
+@mixin absoluteCentering() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.eta-background {
+    background-color: #605858;
+    width: 390px;
+    height: 844px;
+    overflow: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wonton-box {
+    margin: 0;
+}
+
+.wonton-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+    text-align: center;
+}
+
+.eta-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 35px 0 20px 0;
+    font-size: 25px;
+}
+
+.order-number-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    margin-bottom: 150px;
+}
+
+
+.new-order-button {
+    border: none;
+    width: 96%;
+    height: 80px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgba(53, 49, 49, 1);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    transition: 0.2s;
+}
+
+.new-order-button:hover {
+    background-color: rgb(29, 26, 26);
+    transition: 0.2s;
+}
+
+.see-receipt-button {
+    border: none;
+    width: 96%;
+    height: 80px;
+    margin-bottom: 100px;
+    color: rgba(244, 243, 241, 0.94);
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(244, 243, 241, 0.94);
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    transition: 0.2s;
+}
+
+.see-receipt-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.receipt-container {
+    z-index: 5;
+    positioN: absolute;
+    background-color: rgba(238, 238, 238, 1);
+    width: 96%;
+    height: 60%;
+    overflow: scroll;
+    margin-bottom: 80px;
+    @include absoluteCentering();
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.receipt-logo {
+    height: auto;
+    width: 10%;
+}
+
+.receipt-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(61, 57, 57);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.receipt-ordernumber {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(61, 57, 57, 0.623);
+    margin-top: 0;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.receipt-item-container {
+    width: 100%;
+    height: 55%;
+    margin-bottom: 80px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.receipt-item {
+    height: 50px;
+    min-height: 50px;
+    width: 95%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.receipt-item-name {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 8px;
+    color: rgba(53, 49, 49, 1);
+}
+
+.receipt-item-price {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 8px;
+    color: rgba(53, 49, 49, 1);
+}
+
+.receipt-item-dot-divider {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 8px;
+    color: rgba(53, 49, 49, 1);
+    font-weight: bold;
+}
+
+.receipt-item-amount {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(53, 49, 49, 0.719);
+    left: 0;
+}
+
+
+.receipt-total-section {
+    position: absolute;
+    background-color: rgba(53, 49, 49, 0.24);
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    display: flex;
+
+}
+
+.receipt-total-header-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    gap: 5px;
+}
+
+.receipt-total-header {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(61, 57, 57);
+    margin: 0;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.receipt-total-subtext {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(61, 57, 57, 0.692);
+    margin: 0;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.receipt-total {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(61, 57, 57);
+    width: 35%;
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 20px;
+}

@@ -1,11 +1,10 @@
 import MakeKey from "./MakeKey.jsx";
 
 
-const ApiCall = async () => {
+const menuGetter = async () => {
 
       const apiKey = await MakeKey();
 
-      console.log("Här är din api nyckeln: " + apiKey.key)
     
         try {
             const response = await fetch(`https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu`, {
@@ -18,7 +17,6 @@ const ApiCall = async () => {
             }
             const data = await response.json();
 
-            console.log(data.items)
             
             return data.items 
           } catch (err) {
@@ -31,4 +29,4 @@ const ApiCall = async () => {
 
 
 
-export default ApiCall;
+export default menuGetter;

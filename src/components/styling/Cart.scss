@@ -1,8 +1,148 @@
+@mixin absoluteCentering() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 .cart-background {
     width: 390px;
     height: 844px;
     overflow: scroll;
-    background-color: white;
+    background-color: rgba(238, 238, 238, 1);
     z-index: 5;
     position: absolute;
+    @include absoluteCentering();
+}
+
+.cart-list-container {
+    border-top: 2px dotted rgba(95, 95, 95, 0.5);
+    border-bottom: 2px dotted rgba(95, 95, 95, 0.5);
+    width: 95%;
+    height: 60%;
+    margin-bottom: 100px;
+    overflow: scroll;
+}
+
+.cart-item {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: default;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.cart-item:hover {
+    background-color: rgb(255, 112, 112);
+    transition: 0.3s;
+}
+
+.cart-item-name {
+    color: rgba(53, 49, 49, 1);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-dot-divier {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-item-price {
+    color: rgba(53, 49, 49, 1);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cart-total {
+    background-color: rgba(53, 49, 49, 0.24);
+    border-radius: 5px 5px 0px 0px;
+    width: 90%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 100px;
+    cursor: default;
+}
+
+.total-text {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(53, 49, 49, 1);
+    margin: 0;
+}
+
+.total-amount {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(53, 49, 49, 1);
+    margin: 0;
+}
+
+.checkout-button {
+    background-color: rgba(53, 49, 49, 1);
+    border-radius: 5px;
+    width: 95%;
+    height: 85px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.checkout-button:hover {
+    width: 98%;
+    transition: 0.2s;
+    background-color: rgb(34, 32, 32);
 }
