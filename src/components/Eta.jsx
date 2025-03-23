@@ -30,7 +30,6 @@ const Eta = () => {
     const getReceipt = async (orderNumber) => {
 
         const receipt = await receiptGetter(orderNumber);
-        console.log("Här är ditt kvitto.", receipt)
 
         setReceipt(receipt.receipt);
         setShowReceipt(true)
@@ -55,7 +54,7 @@ const Eta = () => {
             <section className='receipt-container'>
                 <img className='receipt-logo' src={logo}></img>
                 <p className='receipt-header'>KVITTO</p>
-                <p className='receipt-ordernumber'>#ordernummer</p>
+                <p className='receipt-ordernumber'>#{receipt.id}</p>
 
                 <section className='receipt-item-container'>
 

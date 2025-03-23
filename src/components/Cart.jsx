@@ -31,13 +31,11 @@ const Cart = () => {
                 return;
             }
     
-            console.log("Cart items on checkout:", cartItems);
     
             try {
 
                 const result = await dispatch(sendCartToApi()).unwrap(); 
     
-                console.log("Order placed successfully:", result);
 
                 navigate('/eta', { state: { orderData: result.order } });
 
