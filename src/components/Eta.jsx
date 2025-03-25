@@ -33,11 +33,7 @@ const Eta = () => {
 
         setReceipt(receipt.receipt);
         setShowReceipt(true)
-        
-        
-        const calculatedTotalPrice = receipt.receipt.items.reduce((total, item) => total + (item.price * item.quantity), 0);
-
-        setTotalPrice(calculatedTotalPrice);  
+        setTotalPrice(receipt.receipt.orderValue);  
 
         
     }

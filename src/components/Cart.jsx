@@ -13,8 +13,8 @@ const Cart = () => {
 
 
         const cartItems = useSelector((state) => state.cart.cartItems);  
-        const cartCount = cartItems.length;
-        const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+        const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+        const totalPrice = cartItems.reduce((total, item) => total + item.totalPrice, 0);
 
         const dispatch = useDispatch();
         const navigate = useNavigate();
@@ -50,29 +50,21 @@ const Cart = () => {
         <>
 
         <button className='cart-button' onClick={() => setIsHidden(!isHidden)}>
-                <img className='cart-icon' src={cartIcon}></img>
+            <img className='cart-icon' src={cartIcon} />
             <div className='notification-container'>
-                <p className='notification-amount'>{cartCount}</p>
+                <p className='notification-amount'>{cartCount}</p> 
             </div>
         </button>
 
-
-
         <section className={`cart-background ${isHidden ? "hidden" : ""}`} >
-
-
             <section className='cart-list-container'>
-
                 {cartItems.map((item) => (
-
-                <section className='cart-item' key={item.id} onClick={() => handleRemoveFromCart(item.id)}>
-                    <p className='cart-item-name'>{item.name}</p>
-                    <p className='cart-dot-divier'>.....</p>
-                    <p className='cart-item-price'>{item.price} SEK</p>
-                </section>
-
+                    <section className='cart-item' key={item.itemType} onClick={() => handleRemoveFromCart(item.itemType)}>
+                        <p className='cart-item-name'>{item.name} <span className='cart-item-quantity'>x{item.quantity}</span></p>
+                        <p className='cart-dot-divider'>.....</p>
+                        <p className='cart-item-price'>{item.totalPrice} SEK</p>
+                    </section>
                 ))}
-
             </section>
 
             <section className='cart-total'>
@@ -81,8 +73,6 @@ const Cart = () => {
             </section>
 
             <button className='checkout-button' onClick={handleOrderPlacement}>TAKE MY MONEY!</button>
-
-
         </section>
         </>
     )

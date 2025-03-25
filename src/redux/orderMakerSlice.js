@@ -9,7 +9,7 @@ export const sendCartToApi = createAsyncThunk(
   
       const { cartItems } = getState().cart;
   
-      const itemTypes = [...new Set(cartItems.map(item => item.itemType))]; 
+      const itemTypes = cartItems.flatMap(item => Array(item.quantity).fill(item.itemType));
   
       const requestBody = { items: itemTypes };
   
